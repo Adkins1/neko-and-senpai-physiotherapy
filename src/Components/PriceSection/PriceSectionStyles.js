@@ -15,6 +15,9 @@ export const Container = styled.section`
     font-size: 2rem;
     text-align: center;
   }
+  @media (orientation: landscape) {
+    height: 160vh;
+  }
 `
 export const Wrapper = styled.div`
   width: 80%;

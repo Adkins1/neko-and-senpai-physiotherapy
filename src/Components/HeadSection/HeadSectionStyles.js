@@ -17,6 +17,9 @@ export const Container = styled.div`
     @media screen and (${maxDevice.tablet}) {
       font-size: 2rem;
     }
+    @media (orientation: landscape) {
+      font-size: 2rem;
+    }
   }
 `
 

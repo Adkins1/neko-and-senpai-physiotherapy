@@ -7,6 +7,9 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media (orientation: landscape) {
+    height: 130vh;
+  }
 `
 export const Wrapper = styled.div`
   width: 80%;

@@ -10,6 +10,9 @@ export const Container = styled.section`
   @media screen and (${maxDevice.tablet}) {
     height: 150vh;
   }
+  @media (orientation: landscape) {
+    height: 150vh;
+  }
 `
 export const Wrapper = styled.div`
   height: 100%;
@@ -23,6 +26,11 @@ export const Wrapper = styled.div`
     width: 100%;
     gap: 20px;
   }
+  @media (orientation: landscape) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+  }
 `
 export const Row = styled.div`
   height: 18%;
@@ -32,6 +40,9 @@ export const Row = styled.div`
   @media screen and (${maxDevice.tablet}) {
     width: 90%;
     flex-wrap: wrap;
+  }
+  @media (orientation: landscape) {
+    width: 45%;
   }
 `
 export const Image = styled.img`

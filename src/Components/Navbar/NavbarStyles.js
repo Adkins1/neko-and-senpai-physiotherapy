@@ -10,7 +10,10 @@ export const Container = styled.nav`
   justify-content: center;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 10000;
+  @media (orientation: landscape) {
+    height: 20vh;
+  }
 `
 export const Wrapper = styled.div`
   width: 100%;

@@ -11,6 +11,9 @@ export const Container = styled.section`
   @media screen and (${maxDevice.tablet}) {
     height: 100vh;
   }
+  @media (orientation: landscape) {
+    height: 160vh;
+  }
 `
 export const Wrapper = styled.div`
   height: 100%;
@@ -23,6 +26,9 @@ export const Wrapper = styled.div`
   @media screen and (${maxDevice.tablet}) {
     width: 90%;
   }
+  @media (orientation: landscape) {
+    width: 90%;
+  }
 `
 export const HeadWrap = styled.div`
   height: 40%;
@@ -32,6 +38,10 @@ export const HeadWrap = styled.div`
   justify-content: center;
   align-items: center;
   @media screen and (${maxDevice.tablet}) {
+    width: 95%;
+    height: 60%;
+  }
+  @media (orientation: landscape) {
     width: 95%;
     height: 60%;
   }
@@ -55,6 +65,10 @@ export const SliderWrap = styled.div`
   @media screen and (${maxDevice.tablet}) {
     width: 95%;
     height: 30%;
+  }
+  @media (orientation: landscape) {
+    width: 95%;
+    height: 60%;
   }
 
   .slick-slider {

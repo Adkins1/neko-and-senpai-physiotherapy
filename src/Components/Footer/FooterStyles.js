@@ -10,6 +10,9 @@ export const Container = styled.section`
   @media screen and (${maxDevice.tablet}) {
     height: 100vh;
   }
+  @media (orientation: landscape) {
+    height: 100vh;
+  }
 `
 export const Wrapper = styled.div`
   height: 100%;
