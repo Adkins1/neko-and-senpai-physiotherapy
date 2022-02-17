@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useState } from "react"
 import * as S from "./NavbarStyles"
 import logoImg from "../../img/nekoSenpai.png"
+import { FaBars } from "react-icons/fa"
 
-const Navbar = () => {
+const Navbar = ({ toggleHamburger }) => {
   return (
     <S.Container>
       <S.Wrapper>
@@ -20,6 +21,9 @@ const Navbar = () => {
               <img src={logoImg} alt="logo" />
             </S.LogoLink>
           </S.Logo>
+          <S.Hamburger>
+            <FaBars onClick={toggleHamburger} />
+          </S.Hamburger>
           <S.Link
             to="offer"
             smooth={true}

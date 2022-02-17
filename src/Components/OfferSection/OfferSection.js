@@ -10,24 +10,30 @@ const OfferSection = () => {
   return (
     <S.Container id="offer">
       <S.Wrapper>
-        <S.Row center>
-          <S.Text>Nasze usługi:</S.Text>
-        </S.Row>
+        <S.Header>Nasze usługi:</S.Header>
         <S.Row>
           <S.Image src={offerMassage} />
-          <S.Text>💆‍♀️ Masaż klasyczny</S.Text>
+          <S.Text>
+            💆‍♀️ <br /> Masaż klasyczny
+          </S.Text>
         </S.Row>
         <S.Row>
           <S.Image ord={2} src={offerKids} />
-          <S.Text ord={1}>👨‍👩‍👦‍👦 Zajęcia korekcyjne z dziećmi</S.Text>
+          <S.Text ord={1}>
+            👨‍👩‍👦‍👦 <br /> Zajęcia korekcyjne z dziećmi
+          </S.Text>
         </S.Row>
         <S.Row>
           <S.Image src={offerRehab} />
-          <S.Text>👨‍🦽 Rehabilitacja</S.Text>
+          <S.Text>
+            👨‍🦽 <br /> Rehabilitacja
+          </S.Text>
         </S.Row>
         <S.Row>
           <S.Image ord={2} src={offerHomeRehab} />
-          <S.Text ord={1}>🏠 Wizyty domowe fizjoterapeuty</S.Text>
+          <S.Text ord={1}>
+            🏠 <br /> Wizyty domowe fizjoterapeuty
+          </S.Text>
         </S.Row>
       </S.Wrapper>
     </S.Container>

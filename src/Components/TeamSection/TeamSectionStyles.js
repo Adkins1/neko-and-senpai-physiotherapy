@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color } from "../../config/styles"
+import { color, maxDevice } from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -8,6 +8,9 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (${maxDevice.tablet}) {
+    height: 100vh;
+  }
 `
 export const Wrapper = styled.div`
   height: 100%;
@@ -17,6 +20,9 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5px;
+  @media screen and (${maxDevice.tablet}) {
+    width: 90%;
+  }
 `
 export const HeadWrap = styled.div`
   height: 40%;
@@ -25,16 +31,18 @@ export const HeadWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (${maxDevice.tablet}) {
+    width: 95%;
+    height: 60%;
+  }
 `
 export const Header = styled.h1`
   width: 100%;
-  height: 50%;
   font-size: 3rem;
   font-weight: bold;
   text-align: center;
 `
 export const HeadText = styled.div`
-  height: 50%;
   font-size: 1.5rem;
   text-align: center;
 `
@@ -44,6 +52,10 @@ export const SliderWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (${maxDevice.tablet}) {
+    width: 95%;
+    height: 30%;
+  }
 
   .slick-slider {
     width: 100%;
@@ -51,13 +63,22 @@ export const SliderWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    @media screen and (${maxDevice.tablet}) {
+      width: 90%;
+    }
     .slick-prev:before {
       font-size: 3rem;
       color: gray;
+      @media screen and (${maxDevice.tablet}) {
+        font-size: 2rem;
+      }
     }
     .slick-next:before {
       font-size: 3rem;
       color: gray;
+      @media screen and (${maxDevice.tablet}) {
+        font-size: 2rem;
+      }
     }
     .slick-list {
       width: 80%;
@@ -82,4 +103,7 @@ export const SlideImage = styled.img`
   object-fit: cover;
   border-radius: 50%;
 `
-export const SlideText = styled.div``
+export const SlideText = styled.div`
+  width: 50%;
+  text-align: center;
+`

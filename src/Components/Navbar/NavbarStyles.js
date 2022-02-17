@@ -30,10 +30,10 @@ export const ContactInfo = styled.div`
   align-items: center;
 `
 export const Links = styled.div`
-  width: 100%;
+  width: 90%;
   height: 70%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 `
 export const Logo = styled.div`
@@ -59,6 +59,9 @@ export const LogoLink = styled(LinkS)`
     height: 100%;
     object-fit: contain;
   }
+  @media screen and (${maxDevice.tablet}) {
+    width: 100%;
+  }
 `
 export const Link = styled(LinkS)`
   height: 100%;
@@ -70,5 +73,19 @@ export const Link = styled(LinkS)`
   :hover {
     cursor: pointer;
     background: ${color.lightPurple};
+  }
+  @media screen and (${maxDevice.tablet}) {
+    display: none;
+  }
+`
+export const Hamburger = styled.div`
+  display: none;
+
+  @media screen and (${maxDevice.tablet}) {
+    display: block;
+  }
+  svg {
+    font-size: 1.5rem;
+    cursor: pointer;
   }
 `

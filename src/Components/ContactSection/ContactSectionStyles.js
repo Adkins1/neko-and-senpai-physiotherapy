@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color } from "../../config/styles"
+import { color, maxDevice } from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -14,6 +14,9 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (${maxDevice.tablet}) {
+    flex-direction: column;
+  }
 `
 export const OptionsWrapper = styled.div`
   width: 50%;
@@ -22,6 +25,9 @@ export const OptionsWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  @media screen and (${maxDevice.tablet}) {
+    width: 100%;
+  }
 `
 export const Header = styled.h1`
   width: 100%;
@@ -51,11 +57,11 @@ export const Form = styled.form`
 export const Input = styled.input`
   width: 100%;
   font-size: 1.5rem;
-  height: 5%;
+  height: 2rem;
 `
 export const TextInput = styled.textarea`
   width: 100%;
-  height: 30%;
+  height: 10rem;
   font-size: 1.5rem;
 `
 export const ImageWrapper = styled.div`

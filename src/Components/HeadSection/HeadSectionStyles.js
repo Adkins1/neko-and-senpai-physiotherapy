@@ -1,5 +1,6 @@
 import styled from "styled-components"
 import backgroundImage from "../../img/background-image.png"
+import { maxDevice } from "../../config/styles"
 
 export const Container = styled.div`
   height: 92vh;
@@ -13,6 +14,9 @@ export const Container = styled.div`
     font-size: 7rem;
     color: white;
     text-shadow: 0 0 5px black;
+    @media screen and (${maxDevice.tablet}) {
+      font-size: 2rem;
+    }
   }
 `
 

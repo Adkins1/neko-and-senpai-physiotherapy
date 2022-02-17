@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color } from "../../config/styles"
+import { color, maxDevice } from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -36,6 +36,9 @@ export const Row = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-collapse: collapse;
+    text-align: center;
+    @media screen and (${maxDevice.tablet}) {
+      font-size: 1rem;
+    }
   }
 `

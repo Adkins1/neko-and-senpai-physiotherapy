@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color } from "../../config/styles"
+import { color, maxDevice } from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -7,6 +7,9 @@ export const Container = styled.section`
   background: ${color.purple};
   display: flex;
   justify-content: center;
+  @media screen and (${maxDevice.tablet}) {
+    height: 100vh;
+  }
 `
 export const Wrapper = styled.div`
   height: 100%;
@@ -14,6 +17,9 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media screen and (${maxDevice.tablet}) {
+    flex-direction: column;
+  }
 `
 export const Links = styled.div`
   height: 80%;
@@ -23,6 +29,10 @@ export const Links = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
+  @media screen and (${maxDevice.tablet}) {
+    height: 25%;
+    width: 100%;
+  }
 `
 export const Link = styled.a`
   display: flex;
@@ -43,6 +53,10 @@ export const Social = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
+  @media screen and (${maxDevice.tablet}) {
+    height: 25%;
+    width: 100%;
+  }
 `
 export const SocialLink = styled.a`
   display: flex;

@@ -1,13 +1,23 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import * as S from "./TeamSectionStyles"
 import Slider from "react-slick"
 import { teamMembers } from "../../data/teamMembers"
 
 const TeamSection = () => {
+  const [screenWidth, setScreenWidth] = useState(0)
+  const [slidesNumber, setSlidesNumber] = useState(3)
+
+  useEffect(() => {
+    const width = window.screen.width
+    setScreenWidth(width)
+    width <= 768 && setSlidesNumber(1)
+    width > 768 && setSlidesNumber(3)
+  }, [screenWidth])
+
   const settings = {
     className: "center",
     infinite: true,
-    slidesToShow: 3,
+    slidesToShow: slidesNumber,
     speed: 500,
     //autoplay: true,
     prevArrow: <PrevArrow />,

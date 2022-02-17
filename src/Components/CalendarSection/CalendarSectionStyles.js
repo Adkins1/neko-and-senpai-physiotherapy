@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color } from "../../config/styles"
+import { color, maxDevice } from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -7,6 +7,9 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (${maxDevice.tablet}) {
+    height: 160vh;
+  }
 `
 export const Wrapper = styled.div`
   width: 80%;
@@ -14,7 +17,34 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  /* padding: 30% 0 30% 0; */
+  flex-direction: column;
+  @media screen and (${maxDevice.tablet}) {
+    width: 90%;
+  }
+`
+export const SubWrapper = styled.div`
+  width: 100%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  @media screen and (${maxDevice.tablet}) {
+    flex-direction: column;
+  }
+`
+export const Header = styled.h1`
+  width: 100%;
+  height: 10%;
+  font-size: 3rem;
+  font-weight: bold;
+  text-align: center;
+`
+export const Text = styled.h1`
+  width: 100%;
+  height: 10%;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
 `
 export const CalendarWrap = styled.div`
   width: 30%;
@@ -23,9 +53,15 @@ export const CalendarWrap = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  @media screen and (${maxDevice.tablet}) {
+    width: 90%;
+  }
 `
 export const Hours = styled.div`
   width: 30%;
+  @media screen and (${maxDevice.tablet}) {
+    width: 90%;
+  }
 `
 export const Form = styled.div`
   height: 100%;
@@ -33,6 +69,10 @@ export const Form = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
+  @media screen and (${maxDevice.tablet}) {
+    width: 90%;
+    flex-direction: column;
+  }
 `
 export const Col = styled.div`
   height: 100%;
@@ -53,15 +93,18 @@ export const Col = styled.div`
       background: ${color.hoverPurple};
     }
   }
+  @media screen and (${maxDevice.tablet}) {
+    width: 100%;
+  }
 `
 export const Input = styled.input`
-  width: 100%;
-  height: 5%;
+  width: 90%;
+  height: 2rem;
   font-size: 1.5rem;
 `
 export const TextInput = styled.textarea`
-  width: 100%;
-  height: 20%;
+  width: 90%;
+  height: 10rem;
   font-size: 1.5rem;
   resize: none;
 `
