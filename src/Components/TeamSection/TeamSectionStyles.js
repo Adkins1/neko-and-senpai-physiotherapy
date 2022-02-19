@@ -4,7 +4,6 @@ import {
   maxWidthDevice,
   maxHeightDevice,
   minWidthDevice,
-  minHeightDevice,
 } from "../../config/styles"
 
 export const Container = styled.section`
@@ -26,9 +25,6 @@ export const Container = styled.section`
   @media screen and (${maxHeightDevice.mobileL}) {
     height: 200vh;
   }
-  /* @media screen and (${minHeightDevice.mobileL}) and (${maxHeightDevice.laptop}) {
-    height: 120vh;
-  } */
 `
 export const Wrapper = styled.div`
   height: 100%;
