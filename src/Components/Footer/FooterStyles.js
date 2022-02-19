@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color, maxDevice } from "../../config/styles"
+import { color, maxWidthDevice, maxHeightDevice } from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -7,10 +7,10 @@ export const Container = styled.section`
   background: ${color.purple};
   display: flex;
   justify-content: center;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     height: 100vh;
   }
-  @media (orientation: landscape) {
+  @media screen and (${maxHeightDevice.mobileL}) {
     height: 100vh;
   }
 `
@@ -20,8 +20,11 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     flex-direction: column;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    flex-direction: row;
   }
 `
 export const Links = styled.div`
@@ -32,9 +35,13 @@ export const Links = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     height: 25%;
     width: 100%;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    height: 80%;
+    width: 25%;
   }
 `
 export const Link = styled.a`
@@ -56,9 +63,13 @@ export const Social = styled.div`
   justify-content: center;
   align-items: center;
   gap: 10px;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     height: 25%;
     width: 100%;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    height: 80%;
+    width: 25%;
   }
 `
 export const SocialLink = styled.a`

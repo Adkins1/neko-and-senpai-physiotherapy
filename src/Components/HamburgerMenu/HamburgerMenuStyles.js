@@ -4,7 +4,7 @@ import { Link as LinkS } from "react-scroll"
 
 export const Container = styled.aside`
   position: fixed;
-  z-index: 999;
+  z-index: 100000;
   width: 100%;
   height: 100%;
   background: #0d0d0d;

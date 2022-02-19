@@ -1,6 +1,6 @@
 import styled from "styled-components"
 import { Link as LinkS } from "react-scroll"
-import { color, maxDevice } from "../../config/styles"
+import { color, maxWidthDevice, maxHeightDevice } from "../../config/styles"
 
 export const Container = styled.nav`
   width: 100%;
@@ -11,7 +11,7 @@ export const Container = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10000;
-  @media (orientation: landscape) {
+  @media screen and (${maxHeightDevice.tablet}) {
     height: 20vh;
   }
 `
@@ -62,7 +62,7 @@ export const LogoLink = styled(LinkS)`
     height: 100%;
     object-fit: contain;
   }
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 100%;
   }
 `
@@ -77,14 +77,14 @@ export const Link = styled(LinkS)`
     cursor: pointer;
     background: ${color.lightPurple};
   }
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     display: none;
   }
 `
 export const Hamburger = styled.div`
   display: none;
 
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     display: block;
   }
   svg {

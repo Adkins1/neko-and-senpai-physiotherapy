@@ -1,5 +1,11 @@
 import styled from "styled-components"
-import { color, maxDevice } from "../../config/styles"
+import {
+  color,
+  maxWidthDevice,
+  maxHeightDevice,
+  minWidthDevice,
+  minHeightDevice,
+} from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -8,12 +14,21 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (${maxDevice.tablet}) {
-    height: 100vh;
+  @media screen and (${maxWidthDevice.mobileM}) {
+    height: 120vh;
   }
-  @media (orientation: landscape) {
-    height: 160vh;
+  @media screen and (${minWidthDevice.mobileM}) and (${maxWidthDevice.mobileL}) {
+    height: 90vh;
   }
+  @media screen and (${minWidthDevice.mobileL}) and (${maxWidthDevice.laptop}) {
+    height: 120vh;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    height: 200vh;
+  }
+  /* @media screen and (${minHeightDevice.mobileL}) and (${maxHeightDevice.laptop}) {
+    height: 120vh;
+  } */
 `
 export const Wrapper = styled.div`
   height: 100%;
@@ -23,11 +38,11 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5px;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 90%;
   }
-  @media (orientation: landscape) {
-    width: 90%;
+  @media screen and (${maxHeightDevice.mobileL}) {
+    width: 80%;
   }
 `
 export const HeadWrap = styled.div`
@@ -37,13 +52,13 @@ export const HeadWrap = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 95%;
     height: 60%;
   }
-  @media (orientation: landscape) {
+  @media screen and (${maxHeightDevice.mobileL}) {
+    height: 40%;
     width: 95%;
-    height: 60%;
   }
 `
 export const Header = styled.h1`
@@ -62,13 +77,13 @@ export const SliderWrap = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 95%;
     height: 30%;
   }
-  @media (orientation: landscape) {
-    width: 95%;
-    height: 60%;
+  @media screen and (${maxHeightDevice.mobileL}) {
+    height: 50%;
+    width: 100%;
   }
 
   .slick-slider {
@@ -77,21 +92,30 @@ export const SliderWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    @media screen and (${maxDevice.tablet}) {
+    @media screen and (${maxWidthDevice.tablet}) {
       width: 90%;
+    }
+    @media screen and (${maxHeightDevice.mobileL}) {
+      width: 100%;
     }
     .slick-prev:before {
       font-size: 3rem;
       color: gray;
-      @media screen and (${maxDevice.tablet}) {
+      @media screen and (${maxWidthDevice.tablet}) {
         font-size: 2rem;
+      }
+      @media screen and (${maxHeightDevice.mobileL}) {
+        font-size: 3rem;
       }
     }
     .slick-next:before {
       font-size: 3rem;
       color: gray;
-      @media screen and (${maxDevice.tablet}) {
+      @media screen and (${maxWidthDevice.tablet}) {
         font-size: 2rem;
+      }
+      @media screen and (${maxHeightDevice.mobileL}) {
+        font-size: 3rem;
       }
     }
     .slick-list {

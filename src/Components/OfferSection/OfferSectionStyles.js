@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color, maxDevice } from "../../config/styles"
+import { color, maxWidthDevice, maxHeightDevice } from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -7,10 +7,10 @@ export const Container = styled.section`
   background-color: ${color.white};
   display: flex;
   justify-content: center;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     height: 150vh;
   }
-  @media (orientation: landscape) {
+  @media screen and (${maxHeightDevice.mobileL}) {
     height: 150vh;
   }
 `
@@ -22,11 +22,11 @@ export const Wrapper = styled.div`
   justify-content: center;
   align-items: center;
   gap: 5px;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 100%;
     gap: 20px;
   }
-  @media (orientation: landscape) {
+  @media screen and (${maxHeightDevice.mobileL}) {
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
@@ -37,12 +37,13 @@ export const Row = styled.div`
   width: 80%;
   display: flex;
   justify-content: ${({ center }) => (center ? "center" : "space-between")};
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 90%;
     flex-wrap: wrap;
   }
-  @media (orientation: landscape) {
+  @media screen and (${maxHeightDevice.mobileL}) {
     width: 45%;
+    height: 33%;
   }
 `
 export const Image = styled.img`
@@ -55,7 +56,7 @@ export const Image = styled.img`
     transform: scale(110%);
     transition: 0.2s;
   }
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     border-radius: 10px;
     width: 100%;
     height: 50%;
@@ -72,12 +73,15 @@ export const Text = styled.div`
   order: ${({ ord }) => (ord ? ord : 2)};
   text-align: center;
 
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 100%;
     order: 2;
     height: 50%;
     line-height: 1.5;
     font-size: 1.5rem;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    line-height: 1.2;
   }
 `
 export const Header = styled.h1`

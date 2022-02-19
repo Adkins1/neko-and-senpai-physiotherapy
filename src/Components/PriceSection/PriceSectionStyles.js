@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color, maxDevice } from "../../config/styles"
+import { color, maxWidthDevice, maxHeightDevice } from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -15,7 +15,7 @@ export const Container = styled.section`
     font-size: 2rem;
     text-align: center;
   }
-  @media (orientation: landscape) {
+  @media screen and (${maxHeightDevice.mobileL}) {
     height: 160vh;
   }
 `
@@ -40,7 +40,7 @@ export const Row = styled.div`
     justify-content: center;
     align-items: center;
     text-align: center;
-    @media screen and (${maxDevice.tablet}) {
+    @media screen and (${maxWidthDevice.tablet}) {
       font-size: 1rem;
     }
   }

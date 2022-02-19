@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color, maxDevice } from "../../config/styles"
+import { color, maxWidthDevice, maxHeightDevice } from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -7,7 +7,10 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media (orientation: landscape) {
+  @media screen and (${maxWidthDevice.tablet}) {
+    height: 110vh;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
     height: 130vh;
   }
 `
@@ -17,8 +20,11 @@ export const Wrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     flex-direction: column;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    flex-direction: row;
   }
 `
 export const OptionsWrapper = styled.div`
@@ -28,8 +34,11 @@ export const OptionsWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 100%;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    width: 50%;
   }
 `
 export const Header = styled.h1`

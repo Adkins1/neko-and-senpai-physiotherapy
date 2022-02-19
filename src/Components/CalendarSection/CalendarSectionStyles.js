@@ -1,5 +1,5 @@
 import styled from "styled-components"
-import { color, maxDevice } from "../../config/styles"
+import { color, maxWidthDevice, maxHeightDevice } from "../../config/styles"
 
 export const Container = styled.section`
   width: 100%;
@@ -7,11 +7,11 @@ export const Container = styled.section`
   display: flex;
   justify-content: center;
   align-items: center;
-  @media screen and (${maxDevice.tablet}) {
-    height: 160vh;
+  @media screen and (${maxHeightDevice.mobileL}) {
+    height: 200vh;
   }
-  @media (orientation: landscape) {
-    height: 160vh;
+  @media screen and (${maxWidthDevice.tablet}) {
+    height: 180vh;
   }
 `
 export const Wrapper = styled.div`
@@ -21,8 +21,11 @@ export const Wrapper = styled.div`
   justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 90%;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    width: 80%;
   }
 `
 export const SubWrapper = styled.div`
@@ -31,8 +34,11 @@ export const SubWrapper = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     flex-direction: column;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    flex-direction: row;
   }
 `
 export const Header = styled.h1`
@@ -56,14 +62,20 @@ export const CalendarWrap = styled.div`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 90%;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    width: 30%;
   }
 `
 export const Hours = styled.div`
   width: 30%;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 90%;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    width: 30%;
   }
 `
 export const Form = styled.div`
@@ -72,9 +84,13 @@ export const Form = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 90%;
     flex-direction: column;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    width: 60%;
+    flex-direction: row;
   }
 `
 export const Col = styled.div`
@@ -96,8 +112,11 @@ export const Col = styled.div`
       background: ${color.hoverPurple};
     }
   }
-  @media screen and (${maxDevice.tablet}) {
+  @media screen and (${maxWidthDevice.tablet}) {
     width: 100%;
+  }
+  @media screen and (${maxHeightDevice.mobileL}) {
+    width: 450%;
   }
 `
 export const Input = styled.input`
